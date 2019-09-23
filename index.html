@@ -1,44 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="PaddyPower Design Homepage." />
+		<title>PaddyPower Design</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="assets/styles.css?v=201909231437" />
+	</head>
 
-<head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PaddyPower Design Homepage.">
-    <title>PaddyPower Design</title>
-    <link href="https://fonts.googleapis.com/css?display=swap&family=Montserrat:800|Lato:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    
-    <style>
-        html {
-            width: 100vw;
-            height: 100vh;
-        }
+	<body>
+		<section class="cover-page">
+			<div class="background">
+				<video autoplay loop poster="assets/images/cover.png">
+					<source src="assets/videos/cover.webm" type="video/webm" />
+					<source src="assets/videos/cover.mp4" type="video/mp4" />
+				</video>
+				<div></div>
+			</div>
+			<div class="cover-page-grid">
+				<img class="logo" src="assets/images/paddypower.svg" alt="PaddyPower." />
+				<div class="center">
+					<h1><span>Hi, we are Paddy</span><span>Power Design</span></h1>
+					<p>Our work lets our customers enjoy their sports experiences.</p>
+				</div>
+				<a class="arrow" href="#tiles">
+					<img src="assets/images/chevron.svg" alt="scroll down" />
+				</a>
+			</div>
+		</section>
 
-        body {
-            width: 100%;
-            height: 100%;
+		<section id="tiles" class="tiles-page">
+			<div class="tiles-page-grid">
+				<a href="locker-room" class="tile">
+					<h2>Our Design System</h2>
+					<p>Welcome to the Locker Room.</p>
+					<img class="arrow" src="assets/images/arrow.svg" alt="more info" />
+				</a>
+				<a class="tile tile--team">
+					<h2>Our Team</h2>
+					<p>Coming soon.</p>
+					<img class="icon" src="assets/images/team.svg" alt="team" />
+					<img class="arrow" src="assets/images/arrow.svg" alt="more info" />
+				</a>
+				<a class="tile">
+					<h2>Our Culture</h2>
+					<p>Coming soon.</p>
+					<img class="arrow" src="assets/images/arrow.svg" alt="more info" />
+				</a>
+				<a href="https://paddypowerbetfair.jobs/" class="tile">
+					<h2>Join the team</h2>
+					<p>Work with us.</p>
+					<img class="icon" src="assets/images/briefcase.svg" alt="briefcase" />
+					<img class="arrow" src="assets/images/arrow.svg" alt="more info" />
+				</a>
+			</div>
+		</section>
 
-            margin: 0;
-            padding: 0;
-            
-            background-color: #0054a5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        h1 {
-            font-family: Montserrat, sans-serif;
-            font-size: 60px;
-            font-weight: 800;
-            color: #ffffff;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Something great is about to happen!</h1>
-</body>
-
+		<script>
+			document.querySelectorAll('a[href^="#"]').forEach(function(element) {
+				element.addEventListener("click", function(event) {
+					event.preventDefault();
+					document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+				});
+			});
+		</script>
+	</body>
 </html>

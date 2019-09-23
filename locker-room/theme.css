@@ -1,0 +1,7 @@
+.markdown-section table {
+  display: table;
+}
+
+.markdown-section th {
+  text-align: left;
+}
